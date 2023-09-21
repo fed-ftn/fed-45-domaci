@@ -1,0 +1,489 @@
+@import "vars";
+@import "mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav {
+  background-color: $headandfoot;
+
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include list-style;
+    gap: 25px;
+
+    .list-item .link-item {
+      @include link-item-decoration(#fff);
+      transition: all 200ms;
+      padding-right: 40px;
+      font-size: 13px;
+      &:hover {
+        @include hover-underline;
+      }
+    }
+
+    .list-item .location-wrapper {
+      padding: 5px 120px 5px 15px;
+      background-color: $narandzasta;
+      display: flex;
+      align-items: center;
+
+      .location-link {
+        @include link-item-decoration($white);
+        transition: all 200ms;
+        &:hover {
+          @include hover-underline;
+        }
+      }
+      .location {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+.hero-section {
+  background-image: url(/fed-45-domaci/slike/intro.jpg);
+  height: 90vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  .opacity {
+    background-color: rgba(0, 0, 0, 0.326);
+    margin-bottom: 100px;
+    padding: 5px 80px;
+    color: $white;
+    text-align: center;
+    .hero-h1 {
+      font-size: 50px;
+      font-weight: 400;
+    }
+    .hero-p {
+      font-size: 18px;
+    }
+  }
+}
+.button-section {
+  padding: 20px 0;
+  .flex-button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 40px;
+    .button {
+      @include link-item-decoration($gray);
+      border: 1px solid $gray;
+      padding: 10px 20px;
+      border-radius: 22px;
+      transition: all 200ms;
+      &:hover {
+        @include buttonhover;
+      }
+    }
+  }
+}
+.picture-section {
+  background-color: $backgroundgray;
+  padding: 80px 0;
+  .picture-wrapper {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+    flex-wrap: wrap;
+
+    .picture-item1 {
+      background-image: url(/fed-45-domaci/slike/1.jpg);
+      width: 250px;
+      height: 350px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .hover-div {
+        display: none;
+        padding: 10px 5px 60px 5px;
+        h4 {
+          font-size: 22px;
+        }
+      }
+      &:hover .hover-div {
+        display: block;
+        @include picturehover;
+      }
+    }
+    .picture-item2 {
+      background-image: url(/fed-45-domaci/slike/2.jpg);
+      width: 250px;
+      height: 350px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .hover-div {
+        display: none;
+        padding: 10px 5px 60px 5px;
+        h4 {
+          font-size: 22px;
+        }
+      }
+      &:hover .hover-div {
+        display: block;
+        @include picturehover;
+      }
+    }
+    .picture-item3 {
+      background-image: url(/fed-45-domaci/slike/3.jpg);
+      width: 250px;
+      height: 350px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .hover-div {
+        display: none;
+        padding: 10px 5px 60px 5px;
+        h4 {
+          font-size: 22px;
+        }
+      }
+      &:hover .hover-div {
+        display: block;
+        @include picturehover;
+      }
+    }
+    .picture-item4 {
+      background-image: url(/fed-45-domaci/slike/4.jpg);
+      width: 250px;
+      height: 350px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .hover-div {
+        display: none;
+        padding: 10px 5px 60px 5px;
+        h4 {
+          font-size: 22px;
+        }
+      }
+      &:hover .hover-div {
+        display: block;
+        @include picturehover;
+      }
+    }
+    .picture-item5 {
+      background-image: url(/fed-45-domaci/slike/5.jpg);
+      width: 250px;
+      height: 350px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      .hover-div {
+        display: none;
+        padding: 10px 5px 60px 5px;
+        h4 {
+          font-size: 22px;
+        }
+      }
+      &:hover .hover-div {
+        display: block;
+        @include picturehover;
+      }
+    }
+    .picture-item6 {
+      background-image: url(/fed-45-domaci/slike/6.jpg);
+      width: 250px;
+      height: 350px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: all 200ms;
+      .hover-div {
+        display: none;
+        padding: 10px 5px 60px 5px;
+
+        h4 {
+          font-size: 22px;
+        }
+      }
+      &:hover .hover-div {
+        display: block;
+        @include picturehover;
+      }
+    }
+
+    // .picture-item .picture {
+    //   width: 250px;
+    //   height: 350px;
+
+    //   //   // Ovde nisam znao kako da poravnam sve slike, jer bez heighta, jer po visini se ne bi slagale ako bih stavio samo width..
+    //   //   // A znam da ovo nije dobro rjesenje jer se moze stretchovati slika, tako da me zanima da li postoji neki drugi nacin ukoliko je neka slika manja od drugih
+    // }
+  }
+}
+
+.pricing-section {
+  padding-top: 40px;
+  padding-bottom: 70px;
+  .pricecheck {
+    display: none;
+  }
+  .blue-header {
+    @include blueheader;
+  }
+  .pricing-p {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+    color: $gray;
+  }
+
+  .divfortable {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    table {
+      color: $white;
+      border-collapse: collapse;
+
+      td {
+        color: $gray;
+        border: 1px solid $headandfoot;
+        padding: 5px 80px;
+      }
+
+      .orange {
+        padding: 10px 60px;
+        background-color: $narandzasta;
+        border: 1px solid $headandfoot;
+      }
+      .blue {
+        padding: 10px 60px;
+        background-color: $headandfoot;
+        border: 1px solid $gray;
+      }
+    }
+  }
+}
+
+.contact-section {
+  padding-top: 40px;
+  padding-bottom: 70px;
+  background-color: $backgroundgray;
+
+  .blue-header {
+    @include blueheader;
+    margin-bottom: 50px;
+  }
+  .contact-flex {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 50px;
+  }
+  .form {
+    background-color: $narandzasta;
+    padding: 25px;
+    width: 60%;
+    .firstpartofform {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      select {
+        width: 150px;
+        padding: 3px;
+      }
+      .text {
+        width: 100%;
+        padding: 3px;
+      }
+    }
+    .email {
+      width: 100%;
+      padding: 3px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+    textarea {
+      width: 100%;
+      padding: 3px;
+    }
+  }
+}
+.footer {
+  background-color: $headandfoot;
+  padding: 5px 0;
+  .footer-text {
+    color: $white;
+    text-align: center;
+    span {
+      color: $narandzasta;
+    }
+  }
+}
+
+@include srednji_ekran {
+  .container {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  .nav .list .list-item {
+    padding-right: 0px;
+    .location-wrapper {
+      padding: 5px 20px 5px 10px;
+      .location {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .opacity {
+      margin-top: 50px;
+      margin-bottom: 0px;
+      padding: 5px 50px;
+      .hero-h1 {
+        font-size: 40px;
+        text-wrap: wrap;
+        margin: 0;
+      }
+    }
+  }
+  .button-section {
+    padding: 10px 0;
+    .flex-button {
+      gap: 20px;
+      .button {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+    }
+  }
+  .picture-section .picture-wrapper {
+    justify-content: center;
+  }
+
+  .pricing-section {
+    .pricecheck {
+      display: none;
+    }
+
+    .divfortable {
+      table {
+        td {
+          padding: 5px 60px;
+        }
+
+        .orange {
+          padding: 10px 30px;
+        }
+        .blue {
+          padding: 10px 40px;
+        }
+      }
+    }
+  }
+  .contact-section {
+    .contact-flex {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .form {
+        width: 80%;
+      }
+
+      iframe {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@include mali_ekran {
+  .nav .list {
+    display: block;
+    .list-item .link-item {
+      display: block;
+      text-align: center;
+      padding: 8px 0;
+    }
+  }
+  .hero-section {
+    height: 30vh;
+    background-color: black;
+    background-image: none;
+    .opacity {
+      margin: 0;
+      .hero-h1 {
+        font-size: 32px;
+      }
+      .hero-p {
+        font-size: 14px;
+      }
+    }
+  }
+  .button-section {
+    .flex-button {
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+  .pricing-section {
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+
+  .pricing-section {
+    .forpricebtn {
+      text-align: center;
+
+      .pricecheck {
+        display: inline-block;
+
+        @include link-item-decoration($gray);
+        border: 1px solid $gray;
+        padding: 10px 20px;
+        border-radius: 22px;
+        transition: all 200ms;
+        &:hover {
+          @include buttonhover;
+        }
+      }
+    }
+    .divfortable {
+      table {
+        display: none;
+      }
+    }
+  }
+  .contact-section {
+    .contact-flex {
+      .form {
+        width: 90%;
+      }
+      iframe {
+        width: 70%;
+      }
+    }
+  }
+}
