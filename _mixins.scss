@@ -1,5 +1,6 @@
+// ====== Nav deco =====
+
 @mixin nav-deco {
-  height: 5vh;
   width: 100%;
   background: $headerFooterBoja;
   color: white;
@@ -42,6 +43,195 @@
       img {
         margin: 0;
         margin-left: 20px;
+      }
+    }
+  }
+}
+
+// =====***** Hedaer deco *****======
+
+@mixin header-deco {
+  .header-section {
+    position: relative;
+    img {
+      width: 100%;
+    }
+
+    .text {
+      text-align: center;
+      position: absolute;
+      background: $naslovi;
+      width: 60em;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      h1 {
+        font-size: 54px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@mixin picture-section-deco {
+  .photo-section {
+    .buttons {
+      text-align: end;
+      margin-right: 100px;
+      button {
+        background-color: white;
+        border: solid 1px lightgray;
+        border-radius: 50px;
+        padding: 15px 50px;
+        margin: 30px 10px 30px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: $hoverBoja;
+        color: white;
+      }
+    }
+
+    .pictures {
+      background: $pozadinaSekcijeBoja;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      gap: 20px;
+      padding: 40px 150px;
+      width: 100%;
+
+      .cena {
+        position: relative;
+        margin: 0;
+
+        img {
+          width: 200px;
+          height: 90%;
+        }
+
+        p {
+          position: absolute;
+          background-color: rgba(211, 211, 211, 0.617);
+          width: 100%;
+          padding: 10px;
+          color: black;
+          font-size: 24px;
+          visibility: hidden;
+        }
+      }
+      .cena:hover {
+        cursor: pointer;
+        p {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+@mixin pricing-section-deco {
+  .pricing-section {
+    padding: 50px;
+    .text-pricing {
+      text-align: center;
+      h2 {
+        font-size: 32px;
+        color: $headerFooterBoja;
+        margin-bottom: 30px;
+      }
+      p {
+        margin-bottom: 30px;
+      }
+    }
+
+    .pricing-button {
+      display: none;
+    }
+
+    .tables {
+      display: flex;
+      justify-content: center;
+
+      width: 800px;
+      border-collapse: collapse;
+    }
+
+    .table-1,
+    .table-2 {
+      color: black;
+
+      text-align: center;
+      border: none;
+
+      td {
+        border: solid 0.2px $bojaFonta;
+        border-collapse: collapse;
+      }
+
+      .orangecol {
+        background-color: $narandzastaBoja;
+        color: white;
+      }
+      .bluecol {
+        background-color: $headerFooterBoja;
+        color: white;
+      }
+    }
+    .table-1 {
+      margin-top: 90px;
+      height: 140px;
+      width: 600px;
+    }
+    .table-2 {
+      height: 230px;
+      width: 500px;
+    }
+  }
+}
+
+@mixin contact-us-section-deco {
+  .section-contact-us {
+    background-color: $pozadinaSekcijeBoja;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      text-align: center;
+      padding: 30px;
+      font-size: 32px;
+      color: $headerFooterBoja;
+    }
+    .mapaforma {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      gap: 100px;
+      padding: 30px;
+
+      .forma {
+        background-color: $narandzastaBoja;
+        width: 60%;
+
+        form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          padding: 20px;
+
+          input {
+            width: 96%;
+            padding: 10px;
+          }
+          select {
+            width: 20%;
+            padding: 10px;
+          }
+          .kraci-input {
+            width: 70%;
+          }
+        }
       }
     }
   }
