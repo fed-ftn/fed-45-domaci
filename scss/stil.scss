@@ -27,6 +27,7 @@ body {
             
             div.location {
                 @include location;
+                text-decoration: underline white;
 
                 img {
                     width: 30px;
@@ -95,11 +96,8 @@ body {
                 justify-content: right;
 
                 div {
-                    width: 15%;
-                    height: 35px;
-                    font-size: 0.7em;
+                    @include filters;
                     margin: 20px 0px 20px 20px;
-                    color: $fontcolor;
                     @include filtersborder;
                     @include flex;
                     justify-content: center;
@@ -125,13 +123,24 @@ body {
 
                 div.imgwrap {
                     @include imgwrap;
+                    position: relative;
 
                     img {
                         width: 100%;
                     }
 
                     div.absolute {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        background-color: rgba(255,255,255, 0.6);
+                        padding-top: 10px;
+                        padding-left: 10px;
+                        height: 80px;
+                        color: black;
                         display: none;
+                        text-align: left;
                     }
 
                     div.overflow {
@@ -139,6 +148,10 @@ body {
                         overflow: hidden;
                     }
 
+                }
+
+                div.imgwrap:hover div.absolute {
+                    display: block;
                 }
             }
         }
@@ -158,6 +171,11 @@ body {
                     margin-top: 40px;
                     color: $fontcolor;
                     font-size: 0.7em;
+                }
+
+                div.hidden {
+                    @include filtersborder;
+                    display: none;
                 }
 
                 table {
@@ -232,7 +250,7 @@ body {
 
                 div.flexcontainer {
                     @include flex;
-                    justify-content: space-around;
+                    justify-content: space-evenly;
                     align-items: flex-start;
                     padding-bottom: 30px;
 
@@ -304,3 +322,79 @@ body {
         }
     }
 }
+
+@media screen and (max-width: 800px) {
+    body {
+        header {
+            nav {
+                div.location {
+                    font-size: 1.2em;
+                }
+            }
+        }
+
+        main {
+            div.section1 {
+                div.headingwrapper {
+                    padding: 200px 0 150px 0;
+
+                    div.fadedbg {
+                        h1 {
+                            width: 50%;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+
+            div.section2 {
+                div.section2margin {
+                    margin: auto;
+                    text-align: center;
+                    padding-bottom: 40px;
+
+                    div.imgwrap {
+                        margin: auto;
+                        padding: 15px 10px 15px 10px;
+                        width: 220px;
+                        height: 220px;
+
+                        div.absolute {
+                            top: 15px;
+                            right: 10px;
+                            bottom: 15px;
+                            left: 10px;
+                        }
+
+                        div.overflow {
+                            height: 200px;
+                        }
+                    }
+
+                }
+            }
+
+            div.section3 {
+                div.section3margin {
+                    table {
+                        width: 100%;
+                    }
+                }
+            }
+
+            div.section4 {
+                div.section4margin {
+                    div.flexcontainer {
+                        flex-wrap: wrap;
+
+                        form {
+                            margin-top: 30px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

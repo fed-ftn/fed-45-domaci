@@ -37,6 +37,13 @@
     border-radius: 50px;
 }
 
+@mixin filters {
+    width: 15%;
+    height: 35px;
+    font-size: 0.7em;
+    color: $fontcolor;
+}
+
 @mixin imgwrap {
     margin-right: 20px;
     margin-bottom: 20px;
@@ -59,7 +66,7 @@
 @mixin table {
     border: 1px solid $fontcolor;
     border-collapse: collapse;
-    width: 60%;
+    width: 80%;
     margin: auto;
     font-size: 0.7em;
     margin-top: 40px;

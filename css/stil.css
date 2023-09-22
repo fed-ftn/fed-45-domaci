@@ -30,6 +30,7 @@ body header nav div.location {
   align-items: center;
   background-color: #f75311;
   width: 20%;
+  text-decoration: underline white;
 }
 body header nav div.location img {
   width: 30px;
@@ -89,8 +90,8 @@ body main div.filters div.filtersmargin div {
   width: 15%;
   height: 35px;
   font-size: 0.7em;
-  margin: 20px 0px 20px 20px;
   color: #797979;
+  margin: 20px 0px 20px 20px;
   border: 1px solid #cfd1d3;
   border-radius: 50px;
   display: flex;
@@ -119,16 +120,30 @@ body main div.section2 div.section2margin div.imgwrap {
   width: 130px;
   height: 170px;
   overflow: hidden;
+  position: relative;
 }
 body main div.section2 div.section2margin div.imgwrap img {
   width: 100%;
 }
 body main div.section2 div.section2margin div.imgwrap div.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 80px;
+  color: black;
   display: none;
+  text-align: left;
 }
 body main div.section2 div.section2margin div.imgwrap div.overflow {
   height: 170px;
   overflow: hidden;
+}
+body main div.section2 div.section2margin div.imgwrap:hover div.absolute {
+  display: block;
 }
 body main div.section3 {
   width: 100%;
@@ -146,10 +161,15 @@ body main div.section3 div.section3margin p {
   color: #797979;
   font-size: 0.7em;
 }
+body main div.section3 div.section3margin div.hidden {
+  border: 1px solid #cfd1d3;
+  border-radius: 50px;
+  display: none;
+}
 body main div.section3 div.section3margin table {
   border: 1px solid #797979;
   border-collapse: collapse;
-  width: 60%;
+  width: 80%;
   margin: auto;
   font-size: 0.7em;
   margin-top: 40px;
@@ -207,7 +227,7 @@ body main div.section4 div.section4margin h2 {
 body main div.section4 div.section4margin div.flexcontainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: flex-start;
   padding-bottom: 30px;
 }
@@ -268,6 +288,49 @@ body footer {
 }
 body footer span {
   color: #f75311;
+}
+
+@media screen and (max-width: 800px) {
+  body header nav div.location {
+    font-size: 1.2em;
+  }
+  body main div.section1 div.headingwrapper {
+    padding: 200px 0 150px 0;
+  }
+  body main div.section1 div.headingwrapper div.fadedbg h1 {
+    width: 50%;
+    margin: auto;
+  }
+  body main div.section2 div.section2margin {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  body main div.section2 div.section2margin div.imgwrap {
+    margin: auto;
+    padding: 15px 10px 15px 10px;
+    width: 220px;
+    height: 220px;
+  }
+  body main div.section2 div.section2margin div.imgwrap div.absolute {
+    top: 15px;
+    right: 10px;
+    bottom: 15px;
+    left: 10px;
+  }
+  body main div.section2 div.section2margin div.imgwrap div.overflow {
+    height: 200px;
+  }
+  body main div.section3 div.section3margin table {
+    width: 100%;
+  }
+  body main div.section4 div.section4margin div.flexcontainer {
+    flex-wrap: wrap;
+  }
+  body main div.section4 div.section4margin div.flexcontainer form {
+    margin-top: 30px;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=stil.css.map */
