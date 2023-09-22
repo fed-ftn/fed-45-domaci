@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-            <div class="location"><img src="slike/location.png"/></div>
+            <div class="location"><img src="slike/location.png"/><a href="#">New York</a></div>
             <ul>
                 <li><a href="#">Rent</a></li>
                 <li><a href="#">Buy</a></li>
@@ -21,8 +21,10 @@
     <main>
         <div class="section1">
             <div class="headingwrapper">
-                <h1>Welcome to Hom</h1>
-                <p>Your fastest way to find or sell home online.</p>
+                <div class="fadedbg">
+                    <h1>Welcome to HomeExchange</h1>
+                    <p>Your fastest way to find or sell home online.</p>
+                </div>
             </div>
         </div>
         <div class="filters">
@@ -34,12 +36,24 @@
         </div>
         <div class="section2">
             <div class="section2margin">
-                <img src="slike/1.jpg"/>
-                <img src="slike/2.jpg"/>
-                <img src="slike/3.jpg"/>
-                <img src="slike/4.jpg"/>
-                <img src="slike/5.jpg"/>
-                <img src="slike/6.jpg"/>
+                <div class="imgwrap">
+                    <img src="slike/1.jpg"/><div class="absolute">Loft Apartment<br>$3,000</div>
+                </div>
+                <div class="imgwrap">
+                    <img src="slike/2.jpg"/><div class="absolute">Loft Apartment<br>$3,000</div>
+                </div>
+                <div class="imgwrap">
+                    <img src="slike/3.jpg"/><div class="absolute">Loft Apartment<br>$3,000</div>
+                </div>
+                <div class="imgwrap">
+                    <img src="slike/4.jpg"/><div class="absolute">Loft Apartment<br>$3,000</div>
+                </div>
+                <div class="imgwrap">
+                    <img src="slike/5.jpg"/><div class="absolute">Loft Apartment<br>$3,000</div>
+                </div>
+                <div class="imgwrap"><div class="overflow"><img src="slike/6.jpg"/><div class="absolute">Loft Apartment<br>$3,000</div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="section3">
@@ -47,28 +61,40 @@
                 <h2>PRICING</h2>
                 <p>Our services prices in New York</p>
                 <table>
-                    <tr>
+                    <tr class="price">
+                        <td colspan="9"></td>
                         <th colspan="6">Price</th>
                     </tr>
-                    <tr>
+                    <tr class="rent">
+                        <td colspan="9"></td>
                         <th colspan="4">Rent/Buy</th>
                         <th colspan="2">Sell</th>
                     </tr>
-                    <tr>
-                        <td colspan="4">Location</td>
+                    <tr class="third">
+                        <td colspan="4" rowspan="3" class="orange">Location</td>
+
                         <th colspan="5">Downtown</th>
+
                         <td colspan="4">3$</td>
+
                         <td colspan="2">3$</td>
+
                     </tr>
-                    <tr>
+                    <tr class="fourth">
                         <th colspan="5">Center</th>
+
                         <td colspan="4">3$</td>
+
                         <td colspan="2">3$</td>
+
                     </tr>
-                    <tr>
+                    <tr class="last">
                         <th colspan="5">Manhattan</th>
+
                         <td colspan="4">3$</td>
+
                         <td colspan="2">3$</td>
+
                     </tr>
                 </table>
             </div>
@@ -76,26 +102,30 @@
         <div class="section4">
             <div class="section4margin">
                 <h2>CONTACT US</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0IrRg9GY0L7RgNC6LCDQodGY0LXQtNC40ZrQtdC90LUg0JTRgNC20LDQstC1!5e0!3m2!1ssr!2srs!4v1695312835451!5m2!1ssr!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <form action="#" method="post">
-                    <div class="form1strow">
-                        <select name="title">
-                            <option value="mrs">Mrs</option>
-                            <option value="miss">Miss</option>
-                            <option value="mr">Mr</option>
-                        </select>
-                        <label for="name"></label>
-                        <input type="text" name="name" placeholder="Your name"/>
+                <div class="flexcontainer">
+                    <div class="iframewrap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0IrRg9GY0L7RgNC6LCDQodGY0LXQtNC40ZrQtdC90LUg0JTRgNC20LDQstC1!5e0!3m2!1ssr!2srs!4v1695312835451!5m2!1ssr!2srs" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <div class="form2ndrow">
-                        <label for="email"></label>
-                        <input type="email" name="email" placeholder="Your email"/>
-                    </div>
-                    <div class="form3rdrow">
-                        <label for="message"></label>
-                        <input type="text" name="message" placeholder="Your message"/>
-                    </div>
-                </form>
+                        <form action="#" method="post">
+                        <div class="form1strow">
+                            <select name="title">
+                                <option value="mrs">Mrs</option>
+                                <option value="miss">Miss</option>
+                                <option value="mr">Mr</option>
+                            </select>
+                            <label for="name"></label>
+                            <input type="text" name="name" placeholder="Your name"/>
+                        </div>
+                        <div class="form2ndrow">
+                            <label for="email"></label>
+                            <input type="email" name="email" placeholder="Your email"/>
+                        </div>
+                        <div class="form3rdrow">
+                            <label for="message"></label>
+                            <input type="text" name="message" placeholder="Your message"/>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </main>

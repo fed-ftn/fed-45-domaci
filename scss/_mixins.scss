@@ -1,0 +1,83 @@
+@mixin flex {
+    display: flex;
+    flex-direction: row;
+    @content;
+}
+
+@mixin location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $locationcolor;
+    width: 20%;  
+}
+
+@mixin links {
+    color: white;
+    text-decoration: none;
+}
+
+@mixin width {
+    width: 100%;
+}
+
+@mixin backgroundimg {
+    background: url("../slike/intro.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin autocenter {
+    margin: auto;
+    text-align: center;
+}
+
+@mixin filtersborder {
+    border: 1px solid $hoverbutton;
+    border-radius: 50px;
+}
+
+@mixin imgwrap {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 130px;
+    height: 170px;
+    overflow: hidden;
+}
+
+@mixin hidetablecells {
+    border: 1px solid white;
+    visibility: hidden;
+}
+
+@mixin tableth {
+    background-color: $header_footer_col;
+    color: white;
+}
+
+@mixin table {
+    border: 1px solid $fontcolor;
+    border-collapse: collapse;
+    width: 60%;
+    margin: auto;
+    font-size: 0.7em;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+@mixin form {
+    width: 90%;
+    margin: auto;
+}
+
+@mixin iframewrap {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}
+
+@mixin iframe {
+    width: 100%;
+    height: 100%;
+}

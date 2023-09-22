@@ -1,3 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;600;800&family=Roboto:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
 
+h2 {
+  color: #374249;
+}
+
+body {
+  height: 100vh;
+}
+body header {
+  width: 100%;
+  background-color: #374249;
+}
+body header nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.7em;
+}
+body header nav div.location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f75311;
+  width: 20%;
+}
+body header nav div.location img {
+  width: 30px;
+  margin: 10px 5px 10px 15px;
+}
+body header nav div.location a {
+  color: white;
+  text-decoration: none;
+}
+body header nav div.location a:hover {
+  text-decoration: underline;
+}
+body header nav ul li {
+  display: inline-block;
+  padding: 0px 35px;
+}
+body header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+body header nav ul li a:hover {
+  text-decoration: underline;
+}
+body main {
+  width: 100%;
+}
+body main div.section1 {
+  width: 100%;
+  background: url("../slike/intro.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body main div.section1 div.headingwrapper {
+  margin: auto;
+  text-align: center;
+  width: 80%;
+  padding: 400px 0px 100px 0px;
+  color: white;
+}
+body main div.section1 div.headingwrapper div.fadedbg {
+  background: rgba(55, 65, 73, 0.6);
+}
+body main div.section1 div.headingwrapper div.fadedbg p {
+  padding-top: 10px;
+}
+body main div.filters {
+  width: 100%;
+}
+body main div.filters div.filtersmargin {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+body main div.filters div.filtersmargin div {
+  width: 15%;
+  height: 35px;
+  font-size: 0.7em;
+  margin: 20px 0px 20px 20px;
+  color: #797979;
+  border: 1px solid #cfd1d3;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body main div.filters div.filtersmargin div:hover {
+  background-color: #cfd1d3;
+  color: white;
+}
+body main div.section2 {
+  width: 100%;
+  background-color: #f3f7f9;
+}
+body main div.section2 div.section2margin {
+  width: 80%;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+body main div.section2 div.section2margin div.imgwrap {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 130px;
+  height: 170px;
+  overflow: hidden;
+}
+body main div.section2 div.section2margin div.imgwrap img {
+  width: 100%;
+}
+body main div.section2 div.section2margin div.imgwrap div.absolute {
+  display: none;
+}
+body main div.section2 div.section2margin div.imgwrap div.overflow {
+  height: 170px;
+  overflow: hidden;
+}
+body main div.section3 {
+  width: 100%;
+}
+body main div.section3 div.section3margin {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+body main div.section3 div.section3margin h2 {
+  margin-top: 30px;
+}
+body main div.section3 div.section3margin p {
+  margin-top: 40px;
+  color: #797979;
+  font-size: 0.7em;
+}
+body main div.section3 div.section3margin table {
+  border: 1px solid #797979;
+  border-collapse: collapse;
+  width: 60%;
+  margin: auto;
+  font-size: 0.7em;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  line-height: 2;
+}
+body main div.section3 div.section3margin table tr td, body main div.section3 div.section3margin table tr th {
+  border: 1px solid #797979;
+}
+body main div.section3 div.section3margin table tr.price {
+  background-color: #f75311;
+  color: white;
+}
+body main div.section3 div.section3margin table tr.price td {
+  border: 1px solid white;
+  visibility: hidden;
+}
+body main div.section3 div.section3margin table tr.rent td {
+  border-left: 1px solid white;
+}
+body main div.section3 div.section3margin table tr.rent th {
+  background-color: #374249;
+  color: white;
+}
+body main div.section3 div.section3margin table tr.third td.orange {
+  background-color: #f75311;
+  color: white;
+  border-top: 1px solid #797979;
+}
+body main div.section3 div.section3margin table tr.third th {
+  background-color: #374249;
+  color: white;
+}
+body main div.section3 div.section3margin table tr.fourth th {
+  background-color: #374249;
+  color: white;
+}
+body main div.section3 div.section3margin table tr.last th {
+  background-color: #374249;
+  color: white;
+}
+body main div.section4 {
+  width: 100%;
+  background-color: #f3f7f9;
+}
+body main div.section4 div.section4margin {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+body main div.section4 div.section4margin h2 {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+body main div.section4 div.section4margin div.flexcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-bottom: 30px;
+}
+body main div.section4 div.section4margin div.flexcontainer div.iframewrap {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+body main div.section4 div.section4margin div.flexcontainer div.iframewrap iframe {
+  width: 100%;
+  height: 100%;
+}
+body main div.section4 div.section4margin div.flexcontainer form {
+  display: inline-block;
+  background-color: #f75311;
+  width: 55%;
+}
+body main div.section4 div.section4margin div.flexcontainer form div.form1strow {
+  width: 90%;
+  margin: auto;
+}
+body main div.section4 div.section4margin div.flexcontainer form div.form1strow select {
+  width: 25%;
+  float: left;
+  margin-top: 15px;
+}
+body main div.section4 div.section4margin div.flexcontainer form div.form1strow input {
+  width: 70%;
+  float: right;
+  margin-top: 15px;
+}
+body main div.section4 div.section4margin div.flexcontainer form div.form2ndrow {
+  width: 90%;
+  margin: auto;
+}
+body main div.section4 div.section4margin div.flexcontainer form div.form2ndrow input {
+  width: 100%;
+  margin-top: 15px;
+}
+body main div.section4 div.section4margin div.flexcontainer form div.form3rdrow {
+  width: 90%;
+  margin: auto;
+}
+body main div.section4 div.section4margin div.flexcontainer form div.form3rdrow input {
+  width: 100%;
+  height: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+body footer {
+  width: 100%;
+  background-color: #374249;
+  text-align: center;
+  color: white;
+  font-size: 0.7em;
+  height: 30px;
+  padding-top: 10px;
+}
+body footer span {
+  color: #f75311;
+}
 
 /*# sourceMappingURL=stil.css.map */

@@ -1,0 +1,306 @@
+@import 'mixins';
+@import 'vars';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fontfamily;
+}
+
+h2 {
+    color: $headingcolor;
+}
+
+body {
+    height: 100vh;
+
+    header {
+        @include width;
+        background-color: $header_footer_col;
+
+        nav {
+            @include width;
+            @include flex;
+            align-items: center;
+            font-size: 0.7em;
+            
+            div.location {
+                @include location;
+
+                img {
+                    width: 30px;
+                    margin: 10px 5px 10px 15px;
+                }
+
+                a {
+                    @include links;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+
+            }
+
+            ul {
+                li {
+                    display: inline-block;
+                    padding: 0px 35px;
+
+                    a {
+                        @include links;
+                    }
+
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        @include width;
+
+        div.section1 {
+            @include width;
+            @include backgroundimg;
+
+            div.headingwrapper {
+                @include autocenter;
+                width: 80%;
+                padding: 400px 0px 100px 0px;
+                color: white;
+
+                div.fadedbg {
+                    background: rgba(55, 65, 73, 0.6);
+
+                    p {
+                        padding-top: 10px;
+                    }
+                }
+
+            }
+        }
+    
+
+        div.filters {
+            @include width;
+
+            div.filtersmargin {
+                width: 80%;
+                margin: auto;
+                @include flex;
+                justify-content: right;
+
+                div {
+                    width: 15%;
+                    height: 35px;
+                    font-size: 0.7em;
+                    margin: 20px 0px 20px 20px;
+                    color: $fontcolor;
+                    @include filtersborder;
+                    @include flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                div:hover {
+                    background-color: $hoverbutton;
+                    color: white;
+                }
+            }
+        }
+
+        div.section2 {
+            @include width;
+            background-color: $photosbackground;
+
+            div.section2margin {
+                width: 80%;
+                margin: auto;
+                padding-top: 30px;
+                padding-bottom: 10px;
+
+                div.imgwrap {
+                    @include imgwrap;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    div.absolute {
+                        display: none;
+                    }
+
+                    div.overflow {
+                        height: 170px;
+                        overflow: hidden;
+                    }
+
+                }
+            }
+        }
+
+        div.section3 {
+            @include width;
+
+            div.section3margin {
+                width: 80%;
+                @include autocenter;
+
+                h2 {
+                    margin-top: 30px;
+                }
+
+                p {
+                    margin-top: 40px;
+                    color: $fontcolor;
+                    font-size: 0.7em;
+                }
+
+                table {
+                    @include table;
+                    line-height: 2;
+
+                    tr {
+                        td, th {
+                            border: 1px solid $fontcolor;
+                        }
+                    }
+
+                    tr.price {
+                        background-color: $locationcolor;
+                        color: white;
+                        
+                        td {
+                            @include hidetablecells;
+                        }
+                    }
+
+                    tr.rent {
+                        td {
+                            border-left: 1px solid white;
+                        }
+
+                        th {
+                            @include tableth;
+                        }
+                    
+                    }
+
+                    tr.third {
+                        td.orange {
+                            background-color: $locationcolor;
+                            color: white;
+                            border-top: 1px solid #797979;
+                        }
+
+                        th {
+                            @include tableth;
+                        }
+                    }
+
+                    tr.fourth {
+                        th {
+                            @include tableth;
+                        }
+                    }
+                    
+                    tr.last {
+                        th {
+                            @include tableth;
+                        }
+                    }
+                }
+            }
+        }
+
+        div.section4 {
+            @include width;
+            background-color: $photosbackground;
+
+            div.section4margin {
+                width: 80%;
+                @include autocenter;
+
+                h2 {
+                    padding-top: 30px;
+                    padding-bottom: 40px;
+                }
+
+                div.flexcontainer {
+                    @include flex;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    padding-bottom: 30px;
+
+                    div.iframewrap {
+                        @include iframewrap;
+                
+                        iframe {
+                            @include iframe;
+                        }
+                    }
+
+                    form {
+                        display: inline-block;
+                        background-color: $locationcolor;
+                        width: 55%;
+
+                        div.form1strow {
+                            @include form;
+
+                            select {
+                                width: 25%;
+                                float: left;
+                                margin-top: 15px;
+                            }
+
+                            input {
+                                width: 70%;
+                                float: right;
+                                margin-top: 15px;
+                            }
+                        }
+
+                        div.form2ndrow {
+                            @include form;
+
+                            input {
+                                @include width;
+                                margin-top: 15px;
+                            }
+                        }
+
+                        div.form3rdrow {
+                            @include form;
+
+                            input {
+                                @include width;
+                                height: 50px;
+                                margin-top: 15px;
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        width: 100%;
+        background-color: $header_footer_col;
+        text-align: center;
+        color: white;
+        font-size: 0.7em;
+        height: 30px;
+        padding-top: 10px;
+
+        span {
+            color: $locationcolor;
+        }
+    }
+}
