@@ -57,193 +57,197 @@ header {
     @include header-link-hover;
 }
 
-main {
 
-    h1 {
-        font-weight: normal;
+
+h1 {
+    font-weight: normal;
+}
+
+h2 {
+    color: $color-blue;
+    font-size: 12pt;
+    padding-bottom: 10px;
+}
+
+.content-top {
+    height: 500px;
+    background-image: url(../slike/intro.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    & .text-container {
+        width: 800px;
+        top: 70%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        color: $color-font-white;
+        background-color: $color-background-transparent;
     }
 
-    h2 {
-        color: $color-blue;
-        font-size: 12pt;
-        padding-bottom: 10px;
+    p {
+        font-size: 9pt;
     }
+}
 
-    .content-top {
-        height: 500px;
-        background-image: url(../slike/intro.jpg);
-        background-position: center;
-        background-size: cover;
-        position: relative;
+.content-mid1 {
 
-        & .content-top-text-container {
-            width: 800px;
-            top: 70%;
-            left: 0;
-            right: 0;
-            margin: auto;
-            position: absolute;
-            color: $color-font-white;
-            background-color: $color-background-transparent;
-        }
-    }
+    .button-cont {
+        padding: 5px 150px;
+        text-align: end;
 
-    .content-mid1 {
-
-        .button-cont {
-            padding: 5px 150px;
-            text-align: end;
-
-            input {
-                padding: 10px 20px;
-                border: solid 1px $color-font;
-                border-radius: 30px;
-                background-color: $color-font-white;
-                margin: 10px;
-                color: $color-font;
-            }
-        }
-
-        @include button-hover;
-
-        .gallery-background {
-            background-color: $color-background-gray-lighter;
-            padding: 20px;
-        }
-
-        .img-gallery {
-            width: 60%;
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 auto;
-
-            .img-1 {
-                @include img-cont;
-                background-image: url(../slike/1.jpg);
-            }
-
-            .img-2 {
-                @include img-cont;
-                background-image: url(../slike/2.jpg);
-            }
-            .img-3 {
-                @include img-cont;
-                background-image: url(../slike/3.jpg);
-            }
-            .img-4 {
-                @include img-cont;
-                background-image: url(../slike/4.jpg);
-            }
-            .img-5 {
-                @include img-cont;
-                background-image: url(../slike/5.jpg);
-            }
-            .img-6 {
-                @include img-cont;
-                background-image: url(../slike/6.jpg);
-            }
-        }
-
-        @include hidden-content;
-    }
-
-    .content-mid2{
-
-        color: $color-font;
-        padding-top: 20px;
-        padding-bottom: 40px;
-
-        p {
-            font-size: 8pt;
-            padding-top: 10px;
-            padding-bottom: 30px;
-        }
-
-        table {
-            margin: 0 auto;
-            border-collapse: collapse;
-            font-size: 8pt;
-
-            tbody {
-                border: solid 1px $color-font;
-
-                td,
-                th {
-                    border: solid 1px $color-font;
-                }
-            }
-
-            th {
-                padding: 5px 50px;
-                color: $color-font-white;
-                font-weight: normal;
-
-                &.orange {
-                    background-color: $color-background-orange;
-                }
-
-                &.blue {
-                    background-color: $color-blue;
-                }
-            }
+        input {
+            @include button-design;
+            
         }
     }
 
-    .content-bottom {
-        padding: 20px;
+    @include button-hover;
+
+    .gallery-background {
         background-color: $color-background-gray-lighter;
+        padding: 20px;
+    }
 
-        div {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            padding: 20px;
+    .img-gallery {
+        width: 60%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        
+        .img-1 {
+            @include img-cont;
+            background-image: url(../slike/1.jpg);
         }
 
-        iframe {
-            width: 250px;
-            height: 200px;
+        .img-2 {
+            @include img-cont;
+            background-image: url(../slike/2.jpg);
+        }
+        .img-3 {
+            @include img-cont;
+            background-image: url(../slike/3.jpg);
+        }
+        .img-4 {
+            @include img-cont;
+            background-image: url(../slike/4.jpg);
+        }
+        .img-5 {
+            @include img-cont;
+            background-image: url(../slike/5.jpg);
+        }
+        .img-6 {
+            @include img-cont;
+            background-image: url(../slike/6.jpg);
+        }
+    }
+
+    @include hidden-content;
+}
+
+.content-mid2{
+
+    color: $color-font;
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    p {
+        font-size: 8pt;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+
+    table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        font-size: 8pt;
+
+        tbody {
+            border: solid 1px $color-font;
+
+            td,
+            th {
+                border: solid 1px $color-font;
+            }
+        }
+
+        th {
+            padding: 5px 50px;
+            color: $color-font-white;
+            font-weight: normal;
+
+            &.orange {
+                background-color: $color-background-orange;
+            }
+
+            &.blue {
+                background-color: $color-blue;
+            }
+        }
+    }
+
+    .hidden-button {
+        @include button-design;
+        display: none;
+    }
+}
+
+.content-bottom {
+    padding: 20px;
+    background-color: $color-background-gray-lighter;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+
+    iframe {
+        width: 250px;
+        height: 200px;
+        border: 0;
+    }
+
+    form {
+        padding: 10px 20px;
+        width: 50%;
+        height: fit-content;
+        background-color: $color-background-orange;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+
+        * {
+            margin: 10px 0;
             border: 0;
+            line-height: 20px;
         }
 
-        form {
-            padding: 10px;
-            width: 50%;
-            height: fit-content;
-            background-color: $color-background-orange;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-content: space-between;
+        select {
+            flex-basis: 30%;
+            padding: 0;
+        }
 
-            * {
-                margin: 10px;
-                border: 0;
-                line-height: 20px;
-            }
+        input[type="text"] {
+            flex-basis: 60%;
+        }
 
-            select {
-                flex-basis: 30%;
-                padding: 0;
-            }
+        input[type="email"] {
+            width: 100%;
+        }
 
-            input[type="text"] {
-                flex-basis: 60%;
-            }
+        textarea {
+            width: 100%;
+        }
 
-            input[type="email"] {
-                width: 100%;
-            }
-
-            textarea {
-                width: 100%;
-            }
-
-            ::placeholder,
-            select {
-                font-size: 7pt;
-                padding: 5px;
-            }
+        ::placeholder,
+        select {
+            font-size: 7pt;
+            padding: 5px;
         }
     }
 }
@@ -261,6 +265,9 @@ footer {
         color: $color-background-orange;
     }
 }
+
+@include screen-medium;
+@include screen-small;
 
 
 

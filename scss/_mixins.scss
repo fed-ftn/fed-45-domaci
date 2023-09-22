@@ -36,3 +36,131 @@
         }
     }
 }
+
+@mixin button-design {
+    padding: 10px 20px;
+            border: solid 1px $color-font;
+            border-radius: 30px;
+            background-color: $color-font-white;
+            margin: 10px;
+            color: $color-font;
+}
+
+@mixin screen-medium {
+    @media (min-width: $screen-size-medium) and (max-width: $screen-size-large) {
+        
+        .content-top .text-container {
+            width: 60%;
+            padding: 0 120px;
+        }
+
+        h1 {
+            text-wrap: wrap;
+        }
+
+        .hidden-button {
+            display: none;
+        }
+
+        .img-gallery {
+
+            & > div{
+                flex-basis: 40%;
+            }
+        }
+
+        .content-bottom div {
+            flex-direction: column;
+            align-items: center;
+
+            form {
+                width: 70%;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@mixin screen-small {
+    @media (max-width: $screen-size-medium) {
+
+        header {
+            flex-direction: column;
+
+            div {
+                width: 100%;
+            }
+
+            nav {
+
+                ul {
+                    flex-direction: column;
+
+                    li {
+                        padding: 10px 0;
+                    }
+                }
+            }
+        }
+
+        .content-top {
+            background-image: none;
+            background-color: $color-hidden-text;
+            height: 120px;
+
+            .text-container {
+                width: 50%;
+                visibility: hidden;
+                position: unset;
+                align-content: center;
+                
+                h1 {
+                    visibility: visible;
+                    text-wrap: wrap;
+                }
+
+                p {
+                    visibility: visible;
+                }
+            }
+        }
+
+        .content-mid1 {
+
+            .button-cont {
+                padding: 5px 0;
+                text-align: center;
+            }
+        }
+
+        .img-gallery {
+            flex-direction: column;
+            align-content: center;
+            text-wrap: nowrap;
+
+            .hidden-content {
+                text-wrap: wrap;
+            }
+        }
+
+        table {
+            display: none;
+        }
+
+        .hidden-button {
+            @include button-design;
+            display: unset;
+        }
+
+        .content-bottom div {
+            flex-direction: column;
+            align-items: center;
+
+            form {
+                width: 90%;
+                margin-top: 20px;
+                flex-direction: column;
+            }
+        }
+    }
+}
