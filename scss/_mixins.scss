@@ -1,0 +1,38 @@
+@mixin img-cont {
+    width: 150px;
+    height: 200px;
+    background-size: cover;
+    margin: 10px;
+}
+
+@mixin header-link-hover {
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+@mixin button-hover {
+    .button-cont input:hover{
+        color: $color-font-white;
+        background-color: $color-background-gray-darker;
+    }
+}
+
+@mixin hidden-content {
+    .hidden-content {
+        background-color: $color-white-transparent;
+        color: $color-hidden-text;
+        font-size: 10pt;
+        text-align: left;
+        padding: 10px;
+        padding-bottom: 30px;
+        visibility: hidden;
+    }
+
+    .img-gallery div:hover {
+
+        .hidden-content {
+            visibility: visible;
+        }
+    }
+}
