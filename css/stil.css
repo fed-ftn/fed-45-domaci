@@ -332,5 +332,84 @@ body footer span {
     width: 100%;
   }
 }
+@media screen and (max-width: 600px) {
+  body header nav {
+    width: 100%;
+    display: block;
+  }
+  body header nav div.location {
+    width: 100%;
+  }
+  body header nav ul li {
+    display: block;
+    text-align: center;
+    padding: 15px 0 15px 0;
+  }
+  body main div.section1 {
+    background-image: none;
+  }
+  body main div.section1 div.headingwrapper {
+    width: 100%;
+    padding: 0;
+  }
+  body main div.section1 div.headingwrapper div.fadedbg {
+    background-color: black;
+  }
+  body main div.section1 div.headingwrapper div.fadedbg p {
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+  body main div.filters div.filtersmargin {
+    justify-content: space-between;
+  }
+  body main div.filters div.filtersmargin div {
+    width: 30%;
+    margin: 20px 0 20px 0;
+  }
+  body main div.section2 div.section2margin {
+    width: 90%;
+  }
+  body main div.section2 div.section2margin div.imgwrap {
+    width: 100%;
+    height: 300px;
+  }
+  body main div.section2 div.section2margin div.imgwrap div.absolute {
+    height: 100px;
+  }
+  body main div.section2 div.section2margin div.imgwrap div.overflow {
+    height: 300px;
+    overflow: hidden;
+  }
+  body main div.section3 div.section3margin div.hidden {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 15%;
+    height: 35px;
+    font-size: 0.7em;
+    color: #797979;
+    border: 1px solid #cfd1d3;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+  }
+  body main div.section3 div.section3margin table {
+    display: none;
+  }
+  body main div.section4 div.section4margin div.flexcontainer form div.form1strow {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body main div.section4 div.section4margin div.flexcontainer form div.form1strow select {
+    width: 100%;
+  }
+  body main div.section4 div.section4margin div.flexcontainer form div.form1strow input {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=stil.css.map */

@@ -398,3 +398,118 @@ body {
     }
 }
 
+@media screen and (max-width: 600px) {
+    body {
+        header {
+            nav {
+                @include width;
+                display: block;
+
+                div.location {
+                    @include width;
+                }
+
+                ul {
+                    li {
+                        display: block;
+                        text-align: center;
+                        padding: 15px 0 15px 0;
+                    }
+                }
+            }
+        }
+
+        main {
+            div.section1 {
+                background-image: none;
+
+                div.headingwrapper {
+                    @include width;
+                    padding: 0;
+                    
+                    div.fadedbg {
+                        background-color: black;
+
+                        p {
+                            padding-top: 0;
+                            padding-bottom: 30px;
+                        }
+                    }
+                }
+            }
+
+            div.filters {
+                div.filtersmargin {
+                    justify-content: space-between;
+
+                    div {
+                        width: 30%;
+                        margin: 20px 0 20px 0;
+                    }
+                }
+            }
+
+            div.section2 {
+                div.section2margin {
+                    width: 90%;
+
+                    div.imgwrap {
+                        width: 100%;
+                        height: 300px;
+
+                        div.absolute {
+                            height: 100px;
+                        }
+
+                        div.overflow {
+                            height: 300px;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+
+            div.section3 {
+                div.section3margin {
+                    
+                    div.hidden {
+                        display: block;
+                        margin: auto;
+                        margin-top: 20px;
+                        margin-bottom: 30px;
+                        @include filters;
+                        @include filtersborder;
+                        @include flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 30%;
+                    }
+
+                    table {
+                        display: none;
+                    }
+                }
+            }
+
+            div.section4 {
+                div.section4margin {
+                    div.flexcontainer {
+                        form {
+                            div.form1strow {
+                                display: flex;
+                                flex-wrap: wrap;
+
+                                select {
+                                    width: 100%;
+                                }
+                                input {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
