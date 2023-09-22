@@ -24,7 +24,7 @@
   padding: 0.5em;
 }
 .mainNavigation .newYorkContainer a {
-  margin-top: 1.5em;
+  margin-top: 1em;
   margin-right: 4em;
   color: white;
 }
@@ -92,6 +92,10 @@
   border-radius: 30px;
   color: rgb(156, 150, 150);
 }
+.buttons .dugme li button:hover {
+  background-color: gray;
+  color: white;
+}
 
 .images {
   width: 100%;
@@ -121,6 +125,9 @@
   text-align: center;
   margin-bottom: 2em;
 }
+.pricing .tabela p {
+  color: gray;
+}
 .pricing table .borderless {
   border: none;
 }
@@ -130,19 +137,106 @@
 
 .contact {
   width: 100%;
-  height: 30em;
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f7f9;
+}
+.contact .red {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
+  padding-top: 10%;
+}
+.contact h1 {
+  height: 10%;
+  text-align: center;
 }
 .contact .contactForm {
-  width: 20%;
-  height: 30%;
+  width: 50%;
+  height: 80%;
   background-color: #f75311;
+  display: block;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact .contactForm select {
+  border: none;
+  width: 15%;
+  color: gray;
+}
+.contact .contactForm input {
+  border: none;
+  width: 70%;
+  margin: 10px 0;
+  height: 30px;
+}
+.contact .contactForm textarea {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  margin: 10px 0;
+  resize: none;
+}
+.contact .contactForm .email {
+  width: 100%;
 }
 .contact .mapouter {
-  width: 20%;
-  height: 30%;
+  height: 100%;
+}
+
+footer {
+  background-color: #374249;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5px;
+}
+footer .prvi {
+  color: white;
+}
+footer .drugi {
+  color: #f75311;
+}
+
+@media screen and (max-width: 1350px) {
+  .contact .red {
+    height: auto;
+  }
+  .contact .red .mapouter {
+    width: 60%;
+    margin-bottom: 20px;
+    margin-left: 20%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mainNavigation {
+    padding: 0;
+    height: auto;
+  }
+  .mainNavigation .newYorkContainer {
+    height: 4em;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .mainNavigation ul {
+    width: 100%;
+  }
+  .mainNavigation ul li {
+    width: 100%;
+    text-align: center;
+    padding: 0.5em;
+  }
+  .intro .naslov {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
