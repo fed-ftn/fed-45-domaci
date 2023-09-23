@@ -1,3 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
 
+header nav {
+  background-color: #374249;
+}
+header nav ul {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+}
+header nav ul li {
+  display: flex;
+  line-height: 42px;
+  width: 6em;
+  padding-left: 20px;
+  color: white;
+}
+header nav ul li img {
+  width: 20%;
+  height: 90%;
+  align-self: center;
+}
+header nav ul li span {
+  text-decoration: underline;
+}
+header nav ul .first-nav-item {
+  background-color: #f75311;
+  width: 20%;
+  padding-right: 52px;
+  padding-left: 24px;
+}
+header .heading-img-container {
+  position: relative;
+  height: 34em;
+  background-image: url(../slike/intro.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header .heading-img-container .h1-h2-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: rgba(55, 66, 73, 0.6);
+  text-align: center;
+  width: 70%;
+}
+header .heading-img-container .h1-h2-container h1,
+header .heading-img-container .h1-h2-container h2 {
+  font-weight: lighter;
+}
+header .heading-img-container .h1-h2-container h1 {
+  font-size: 3em;
+}
+header .heading-img-container .h1-h2-container h2 {
+  font-size: 1em;
+}
 
 /*# sourceMappingURL=style.css.map */
