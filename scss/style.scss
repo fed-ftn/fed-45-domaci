@@ -1,0 +1,229 @@
+@import 'vars';
+@import 'mixins';
+
+@include main;
+
+body {
+    header {
+        background-color: $headerAndFooter_Color;
+        height: 4em;
+        display: flex;
+        justify-content: flex-start;
+        .location {
+            padding: 2em;
+            padding-right: 5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $orange_Color;
+            img {
+                height: 3em;
+            }
+            a {
+                color: white;
+                font-family: $main_Font;
+            }
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            ul {
+                padding-left: 3em;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-content: center;
+                list-style: none;
+                li {
+                    a {
+                        text-decoration: none;
+                        font-family: $main_Font;
+                        font-size: 10pt;
+                        padding: 10px 20px;
+                        color: white;
+                        &:hover {
+                            color: $hoverButton_Color;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .intro {
+        background-image: url('../slike/intro.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 50em;
+        padding-bottom: 10em;
+        display: flex;
+        justify-content: center;
+        align-items:end;
+        .headingContainer {
+            width: 50%;
+            
+            h1 {
+                color: white;
+                text-align: center;
+                font-family: $main_Font;
+                font-weight: lighter;
+                font-size: 40pt;
+                background: rgba(55, 66, 73, 0.6);
+            }
+            h3 {
+                color: white;
+                text-align: center;
+                font-family: $main_Font;
+                font-weight: lighter;
+                background: rgba(55, 66, 73, 0.6);
+            }
+        
+        }
+    }
+
+    .itemContainer {
+        .filter {
+            height: 6em;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            margin-right: 6em;
+            a {
+                border: 1px solid $font_Color;
+                padding: 10px 15px;
+                margin: 20px;
+                border-radius: 20px;
+                color: $font_Color;
+                font-family: $main_Font;
+                text-decoration: none;
+                &:hover {
+                    background-color: $hoverButton_Color;
+                }
+            }
+        }
+
+        .items {
+            background-color: $bgSection_Color;
+            padding: 30px 10em;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            align-items: center;
+            img {
+                width: 21%;
+                height: 45%;
+            }
+        }
+        
+    }
+
+    .pricing {
+        height: 50vh;
+        padding: 30px 40px;
+        h2, h3 {
+            font-family: $main_Font;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 50%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            
+            td {
+                border: 1px solid $font_Color;
+                padding: 10px 30px;
+                text-align: center;
+                font-family: $main_Font;
+                
+                &.grey {
+                    background-color: $headerAndFooter_Color;
+                    color: white;
+                }
+                &.orange {
+                    background-color: $orange_Color;
+                    color: white;
+                }
+                &.emptycell {
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .contact {
+        background-color: $bgSection_Color;
+        height: 40vh;
+        padding: 50px;
+        .contactInfo {
+            display: flex;
+            justify-content: center;
+            // align-content: center;
+
+            // .map {
+
+            // }
+
+            .contactForm {
+                width: 45%;
+                height: 250px;
+                padding: 15px;
+                margin-left: 7em;
+                background-color: $orange_Color;
+                border-radius: 5px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                
+                #titles {
+                    height: 3em;
+                    width: 30%;
+                    padding: 5px;
+                    border-radius: 5px;
+                }
+                .contactName {
+                    height: 3em;
+                    width: 67%;
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: none;
+                }
+                .contactEmail {
+                    height: 3em;
+                    width: 100%;
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: none;
+                }
+                textarea {
+                    height: 7em;
+                    width: 100%;
+                    padding: 5px;
+                    border-radius: 5px;
+                    border: none;
+                    resize: none;
+                }
+            }
+        }
+    }
+
+    footer {
+        height: 3em;
+        background-color: $headerAndFooter_Color;
+        color: white;
+        text-align: center;
+        padding: 1.1em;
+        p {
+            font-family: $main_Font;
+            font-weight: lighter;
+            font-size: 10pt;
+        }
+        span {
+            color: $orange_Color;
+        }
+    }
+}
