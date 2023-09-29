@@ -35,9 +35,6 @@ body header nav {
 body header nav ul {
   padding-left: 3em;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: center;
   list-style: none;
 }
 body header nav ul li a {
@@ -100,17 +97,53 @@ body .itemContainer .filter a:hover {
 }
 body .itemContainer .items {
   background-color: #f3f7f9;
-  padding: 30px 10em;
+  padding: 30px 5em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-content: space-between;
-  align-items: center;
 }
-body .itemContainer .items img {
-  width: 21%;
-  height: 45%;
+body .itemContainer .items .room {
+  width: 23%;
+  height: 25em;
+  margin: 10px;
+}
+body .itemContainer .items .room .info {
+  width: 100%;
+  height: 40%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+  display: none;
+}
+body .itemContainer .items .room:hover .info {
+  display: block;
+}
+body .itemContainer .items .room1 {
+  background: url("../slike/1.jpg");
+  background-size: cover;
+}
+body .itemContainer .items .room2 {
+  background-image: url("../slike/2.jpg");
+  background-size: cover;
+}
+body .itemContainer .items .room3 {
+  background-image: url("../slike/3.jpg");
+  background-size: cover;
+}
+body .itemContainer .items .room4 {
+  background-image: url("../slike/4.jpg");
+  background-size: cover;
+}
+body .itemContainer .items .room5 {
+  background-image: url("../slike/5.jpg");
+  background-size: cover;
+}
+body .itemContainer .items .room6 {
+  background-image: url("../slike/6.jpg");
+  background-size: cover;
 }
 body .pricing {
   height: 50vh;
@@ -145,14 +178,11 @@ body .pricing table td.emptycell {
 }
 body .contact {
   background-color: #f3f7f9;
-  height: 40vh;
   padding: 50px;
-}
-body .contact .contactInfo {
   display: flex;
   justify-content: center;
 }
-body .contact .contactInfo .contactForm {
+body .contact .contactForm {
   width: 45%;
   height: 250px;
   padding: 15px;
@@ -163,27 +193,27 @@ body .contact .contactInfo .contactForm {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-body .contact .contactInfo .contactForm #titles {
+body .contact .contactForm #titles {
   height: 3em;
   width: 30%;
   padding: 5px;
   border-radius: 5px;
 }
-body .contact .contactInfo .contactForm .contactName {
+body .contact .contactForm .contactName {
   height: 3em;
   width: 67%;
   padding: 5px;
   border-radius: 5px;
   border: none;
 }
-body .contact .contactInfo .contactForm .contactEmail {
+body .contact .contactForm .contactEmail {
   height: 3em;
   width: 100%;
   padding: 5px;
   border-radius: 5px;
   border: none;
 }
-body .contact .contactInfo .contactForm textarea {
+body .contact .contactForm textarea {
   height: 7em;
   width: 100%;
   padding: 5px;
@@ -205,6 +235,70 @@ body footer p {
 }
 body footer span {
   color: #f75311;
+}
+@media screen and (max-width: 1200px) {
+  body .itemContainer .items .room {
+    width: 28%;
+  }
+  body .contact {
+    display: flex;
+    flex-direction: column;
+  }
+  body .contact .mapHolder {
+    margin: 20px auto;
+  }
+  body .contact .contactForm {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 670px) {
+  body header {
+    height: auto;
+    flex-direction: column;
+  }
+  body header .location {
+    justify-content: flex-start;
+  }
+  body header nav {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  body header nav ul {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+  }
+  body header nav ul li {
+    padding: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  body header nav ul li:hover {
+    background-color: #8a8a8a;
+  }
+  body .intro {
+    height: auto;
+    background-image: none;
+    background-color: black;
+    padding: 50px;
+  }
+  body .intro .headingContainer {
+    width: auto;
+  }
+  body .intro .headingContainer h1, body .intro .headingContainer h3 {
+    background: none;
+  }
+  body .itemContainer .items {
+    flex-direction: column;
+    align-content: center;
+  }
+  body .itemContainer .items .room {
+    width: 80%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
